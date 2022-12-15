@@ -1,0 +1,1070 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* Landing page */
+.mainsite{
+    padding-top: 30px;
+    width: 100%;
+    /* height: 100vh; */
+    /* border: 2px solid red; */
+} 
+/* Landing page */
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+
+/* navbar starts here */ 
+
+.mainsite .navbar{
+    /* border: 2px solid blue; */
+    height: 15%;
+    margin: auto;
+    display: flex;  
+    align-items: center;
+    justify-content: space-evenly;
+} 
+.mainsite .navbar img{
+    cursor: pointer;
+    
+}   
+.mainsite .navbar ul li{
+    list-style-type: none;
+    /* to remove button icons */
+    display: inline-block;
+    /* to make li in row direction */
+    margin: 0 20px;
+    position: relative;
+}
+.mainsite .navbar ul li a{
+    text-decoration: none; 
+    /* to remove underline */
+   font-size: small;
+    color: black;
+    font-weight: 1000;
+    font-family: 'IBM Plex Serif', serif;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    /* here , width is 0% */
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    /* underline to be nearer to the text above */
+    transition: 0.3s;
+
+    /* To give the underline effect to the text from left to right */
+}
+.navbar ul li:hover:after{
+    width: 100%;
+    color: white;
+}
+
+/* hover effect on li */
+
+.mainsite .navbar button{
+   width: 130px;
+   height: 50px;
+   border-radius: 5px;
+   border: none;
+   font-family: 'IBM Plex Serif', serif;
+   font-weight: 600;
+}
+
+/*  button styling */
+
+.mainsite .navbar button:hover{
+    
+    cursor: pointer;
+}
+
+/*  button styling  */
+#button1{
+    background: #124C5F;
+    color: white;
+    border-radius: 2px;
+
+}
+#button1:hover{
+    background: #009688;
+    color: white;
+    cursor: pointer;
+}
+#button2{
+    background: #C7E7E1;
+    border-radius: 2px;
+}
+#button2:hover{
+    background: #124C5F;
+    color: white;
+    cursor: pointer;
+}
+
+/* creating buttons stylings using  different id's  */
+
+
+/*  -----------------------navbar ends here---------------------------------------------------------- */
+
+
+
+
+
+
+
+
+/* Page 2 Starts Here */
+
+.page2{
+    /* border: 2px solid blue; */
+    
+    height: 500px;
+    display: flex;
+    background: url(./Vector\ 1.png)
+    
+    
+}
+.page2 .page2text{
+    /* border: 2px solid black; */
+    width: 50%;
+    height: 100%;
+    border-bottom-left-radius: 150px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 80px;
+    border-top-right-radius: 0px;
+    margin-left: 110px;
+   
+}
+.page2 .page2text p{
+   
+     font-size:60px;
+    font-weight: 500px; 
+    margin-top: 80px;
+    font-family: 'Pangolin', cursive;
+
+}
+
+/*    styling of p tag */
+
+
+
+.page2 .page2text h3{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    
+}
+/*  h3 styling */
+
+.page2 .page2img{
+    /* border: 2px solid black; */
+    width: 50%;
+    height: 100%;
+    /* background:rgba(255, 242, 179, 0.34); */
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 80px;
+    border-top-right-radius: 80px;
+
+}
+/* img styling  */
+
+
+.page2 .page2text button{
+    width: 150px;
+   height: 55px;
+   border-radius: 5px;
+   border: none;
+   font-family: 'IBM Plex Serif', serif;
+   font-weight: 600;
+   background: #124C5F;
+   color: white;
+   margin-top: 50px;
+   transition: ease-in-out;
+}
+.page2 .page2text button:hover{
+    transform: scale(1.1);
+}
+
+/*  button styling and hovering effect */
+
+
+
+.page2 .page2img img{
+    width: 620px;
+    margin-top: 50px;
+    margin-left: 130px;
+    transition: ease-in-out;
+}
+.page2 .page2img img:hover{
+    transform: scale(1.1);
+}
+
+/* <--------------------------page 2 ends here -------------------------------------------------> */
+
+
+
+
+
+
+
+
+/* Page 3 */
+
+#service{
+    /* border: 2px solid blue; */
+    width: 100%;
+    padding: 70px 0;
+    background: white;
+    
+}
+#service h2{
+    font-family: 'Pangolin', cursive;  
+    margin-left: 80px;
+}
+#service h2:hover{
+    cursor: pointer;
+    color: #009688;
+}
+.servicebox{
+    
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+.single-service{
+    flex-basis:15% ;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+}
+.single-service img{
+    margin-top: 30px;
+    width: 100%;
+    border-radius: 5px;
+    /* border: 0.2px dotted red; */
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(rgba(205, 201, 201, 0.5),#009688);
+    opacity: 0;
+    transition: 1s;
+
+}
+.single-service:hover .overlay{
+    opacity: 1;
+
+}
+.service-desc{
+    width: 80%;
+    position: absolute;
+    bottom:0 ;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 1s;
+
+}
+hr{
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 70%;
+}
+.service-desc p{
+   font-size: 14px; 
+}
+.single-service:hover .service-desc{
+ bottom: 20%;
+ opacity: 1;
+
+}
+
+/* --------------------Page 3 Ends here------------------------------------------------------- */
+
+/* ---------------------------------------page 4 ------------------------- */
+
+
+
+
+
+#learn{
+    display: flex;
+    padding-bottom: 2px;
+}
+
+/*  display flex */
+
+
+#learn .leftlearn{
+    /* border: 2px solid red; */
+    width: 50%;
+    height: 70vh;
+    margin-left: 80px;
+}
+#learn .leftlearn:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    
+}
+
+/*  left side donw with styling and hover effect */
+
+#learn .rightlearn{
+    /* border: 2px solid blue; */
+    width: 50%;
+    height: 50vh;
+}
+#learn .rightlearn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/*  right part with display flex  */
+
+
+#learn .rightlearn p{    /*  p tag */
+    font-family: 'Pangolin', cursive; 
+    font-size: 35px;
+    line-height: 45px;
+    letter-spacing: 0.05rem;
+}
+#learn .rightlearn h3{    /*  h3-tag  */
+    font-family: 'Roboto', sans-serif;
+    line-height: 25px;
+    letter-spacing: 0.05rem;
+}
+#learn .rightlearn button{
+    width: 120px;
+    height: 50px;
+    border: none;
+    background: #124C5F;
+    color: white;
+    letter-spacing: 0.05rem;
+    font-weight: 500;
+    font-family: sans-serif;
+    font-size: 13px;
+    border-radius: 2px;
+}
+#learn .rightlearn button:hover{
+    cursor: pointer;
+    color: #ffffff;
+   background-color:  #009688;
+   cursor: pointer;
+}
+/* button styling and hover effect  */
+
+
+
+
+/* --------------------Page 4 Ends here------------------------------------------------------- */
+
+
+
+
+
+/* --------------------Page 5 Starts here------------------------------------------------------- */
+
+
+
+#products{
+    margin-top: 80px;
+    /* border: 2px solid blue; */
+    height: 150vh;
+    
+}
+
+#products .title{
+    /* border: 2px solid green; */
+    height: 13%;
+   /* margin-left: 50px; */
+   /* padding-left: 20px; */
+   color: #009688;
+   align-items: baseline;
+}
+
+#products .title:hover p{
+    color: #124C5F;
+    cursor: pointer;
+}
+#products .title p{
+    font-family: 'Pangolin', cursive; 
+    font-size: 40px; 
+    margin-left: 80px;
+    margin-top: 60px;
+    
+}
+#products .title .hrline{
+    /* border: 2px solid #009688 ; */
+    width: 380px;
+    margin-left: 80px;
+}
+#products .title:hover #ul{
+    color: #124C5F;
+    cursor: pointer;
+    
+}
+
+
+#products .offer{
+    /* border: 2px solid red; */
+    height: 15%;
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+}
+#products .offer h2{
+    font-family: 'Rubik', sans-serif;
+    font-size: 40px;
+    margin-left: 70px;
+    margin-right: 500px;
+}
+#products .offer #button1{
+    font-family: 'Rubik', sans-serif;
+    height: 60px;
+    width: 150px;
+    font-size: 20px;
+    border: none;
+}
+
+
+#products .items{
+    /* border: 2px solid blue; */
+    height: 70%;
+    display: flex;
+    
+}
+#products .items .item1{
+    /* border: 2px solid black; */
+    width: 33.33%;
+    height: 100%;
+}
+#products .items .item1 #para{
+    /* border: 2px solid black; */
+    /* width: 33.33%; */
+    margin-bottom: 19px;
+    
+    
+} 
+#products .items .item2{
+    /* border: 2px solid black; */
+    width: 33.33%;
+    height: 100%;
+    
+}
+#products .items .item2 #para{
+    /* border: 2px solid black; */
+    /* width: 33.33%; */
+    margin-bottom: 15px;
+    
+    
+    
+} 
+#products .items .item3{
+    /* border: 2px solid black; */
+    width: 33.33%;
+    height: 100%;
+}
+
+
+#products .items #img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#h2{
+    font-family: 'Rubik', sans-serif;
+   
+}
+
+#products .items #h2:hover{
+    cursor: pointer;
+    color: #009688;
+}
+#para{
+    font-family: 'Rubik', sans-serif; 
+    color: rgb(149, 144, 144); 
+}
+#products .items #para:hover{
+    cursor: pointer;
+    color: black;
+}
+#button{
+    width: 150px;
+   height: 50px;
+   border: 3px solid #124C5F ;
+   color: #124C5F;
+   font-family: 'Rubik', sans-serif;
+   font-weight: 700; 
+   font-size: medium;
+   background-color: transparent;
+   border-radius: 5px;
+}
+#products .items #button:hover{
+    cursor: pointer;
+    color: black;
+    transform: scale(1.1);
+}
+
+/* button used with id -styling and hover effects */
+
+
+#products .items img{
+    margin-left: 100px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    
+}
+#products .items #h2{
+    margin-left: 100px;
+    margin-top: 20px;
+}
+#products .items #para{
+    margin-left: 100px;
+    margin-top: 5px;
+}
+#products .items #button{
+    margin-left: 100px;
+    margin-top: 20px;
+}
+/* -----------------------page end----------------------------------------------  */
+
+
+
+
+/* -----------------------page 6 Starts----------------------------------------------  */
+
+
+
+#awareness .block{
+    /* border: 2px solid blue; */
+    height: 100vh;
+    display: flex;
+    background: linear-gradient(transparent,lightblue);
+    border-radius: 10px;
+    
+    
+}
+#awareness .block .block1{
+    /* border: 2px solid green; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#awareness .block .block1 p{
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Pangolin', cursive; 
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+#awareness .block .block1 h3{
+    font-size: 17px;
+    font-weight: 400;
+    font-family: 'Rubik', sans-serif;
+    color: darkgray;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 2rem;
+    margin-left: 50px;
+}
+#awareness .block .block1 #button1{
+    width: 150px;
+    height: 60px;
+    font-size: 18px;
+    border: none;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    margin-left: -10px;
+}
+#awareness .block .block2{
+    /* border: 2px solid red; */
+    width: 50%;
+}
+#awareness .block .block2 img{
+    height: 95vh;
+}
+#awareness .block .block2 img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    
+}
+/* ---------------------------page 6 ends here ------------------------------------------------------------- */
+
+
+
+/* ---------------------------page 7 starts here ------------------------------------------------------------- */
+
+#happycustomer{
+    /* border: 2px solid blue; */
+    height: 120vh;
+}
+#happycustomer .hctitle{
+    /* border: 2px solid green; */
+    height: 15vh;
+    padding-top: 45px;
+    margin-left: 30px;
+}
+#happycustomer .hctitle p{
+    font-size: 35px;
+    font-family: 'Pangolin', cursive; 
+    margin-top: 10px;
+    margin-left: 60px;
+}
+#happycustomer .hctitle .underline{
+    border: 2px solid #124C5F;
+    width:230px;
+    margin-left: 60px;
+    
+}
+#happycustomer .customer{
+    /* border: 2px solid orangered; */
+    height: 84%;
+    display: flex;
+}
+#happycustomer .customer .customer1{
+    /* border: 2px solid blue; */
+    width: 33.33%;
+    height: 100%;
+    
+}
+#happycustomer .customer .customer2{
+    /* border: 2px solid blue; */
+    width: 33.33%;
+    height: 100%;
+}
+#happycustomer .customer .customer3{
+    /* border: 2px solid blue; */
+    width: 33.33%;
+    height: 100%;
+}
+#happycustomer .customer .customerimagebox{
+    /* border: 2px solid black; */
+    height: 250px;
+    width: 300px;
+    margin-left: 65px;
+    margin-top: 50px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    
+    
+}
+/* for image boxes */
+
+#happycustomer .customer .customerimagebox#box1{
+    background: #FFF1A6;
+}
+#happycustomer .customer .customerimagebox#box1 #cust1img{
+    margin-top: -45px;
+    margin-left: 4px;
+    height: 300px;
+}
+
+
+#happycustomer .customer .customerimagebox#box2{
+    background: #EBA8BF;
+}
+#happycustomer .customer .customerimagebox#box2 #cust2img{
+    width: 280px;
+    margin-top: -60px;
+    margin-left: 4px;
+}
+
+/*   img styling #cust2img */
+
+
+#happycustomer .customer .customerimagebox#box3{
+    background: #DDC7ED;
+}
+#happycustomer .customer .customerimagebox#box3 #cust3img{
+    width: 234px;
+    margin-top: -57px;
+    margin-left: 40px;
+    height: 307px;
+    
+}
+/*   img styling #cust3img */
+
+
+#happycustomer .customer .customerbox{
+    /* border: 2px solid red; */
+    width: 300px;
+    margin-left: 64px;
+    height: 130px;
+    background: #124C5F;
+}
+/* green color box of rating */
+
+#happycustomer .customer .customerbox #parabox{
+    font-size: 25px;
+    font-family: 'Rubik', sans-serif;
+    color: #DDCA69;
+    margin-left: 65px;
+    padding-top: 15px;
+}
+/* name of the customer */
+#happycustomer .customer .customerbox #parabox:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    color: white;
+}
+/*  hovering upon the names */
+#happycustomer .customer .customerbox #h5{
+    font-family: 'Rubik', sans-serif;
+    color: #c9f9f4;
+    font-weight: 200;
+    margin-left: 45px;
+    padding-top: 20px;
+}
+/* rating line */
+#happycustomer .customer .customerbox #h5:hover{
+    color: white;
+    cursor: pointer;
+}
+
+#happycustomer .customer #rating{
+    /* border: 2px solid red; */
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+#happycustomer .customer #rating img{
+    width: 220px;
+}
+
+/* rating image of bones */
+#happycustomer .customer #rating #rate{
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+
+/* rating */
+#happycustomer .customer #rating #rate:hover{
+    color: white;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+#happycustomer .customer #button1{
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+    font-family: 'Rubik', sans-serif;
+    border: none;
+    border-radius: 5px;
+    margin-top: 80px;
+    margin-left: -315px;
+    letter-spacing: 0.08rem;
+    
+   
+}
+
+/* ---------------------------page 6 ends here ------------------------------------------------------------- */
+
+/* ---------------------------page 7 Starts here ------------------------------------------------------------- */
+
+#endpage{
+    /* border: 2px solid blue; */
+    height: 100vh;
+    /* background: linear-gradient(white, rgb(166, 165, 165)); */
+    background: #F6FAF9;
+}
+/* whole of bottom page */
+
+#endpage .endpagetitle{
+    /* border: 2px solid green; */
+    height: 20%;
+}
+
+/*  title  */
+
+#endpage .endpagetitle p{
+    font-size: 35px;
+    font-family: 'Pangolin', cursive; 
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+/*  styling for title   */
+
+#endpage .endpagemail{
+    /* border: 2px solid red; */
+    height: 20%;
+}
+
+/* mail part  -----  we used here FORM tag with class --> searchbox ------------------*/
+
+#endpage .endpagemail .searchbox{
+   /* border: 2px solid black; */
+   height: 80px;
+   width: 600px;
+   margin-left: 350px;
+   margin-top: 20px;
+   /* background: white; */
+   border-radius: 5px;
+   box-shadow: black 5px 5px 10px 1px;
+   display: flex;
+   align-items: center;
+   
+}
+#endpage .endpagemail .searchbox input{
+    flex: 0.8;
+    padding: 15px 10px;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+/* input given flex 0.8 as it takes whole of the div provided & border , outline 0 along with transparent bg-color  */
+
+#endpage .endpagemail .searchbox img{
+    width:30px;
+    margin-left: 30px;
+}
+
+#endpage .endpagemail .searchbox button{
+    height: 50px;
+    width: 120px;
+    border: 0;
+    font-size: 15px;
+    font-family: 'Rubik', sans-serif;
+    border-radius: 5px;
+    margin-left: 70px;
+}
+
+/*  mail part ends here ----------------------------------------------------*/
+
+#endpage .endpageaddress{
+    /* border: 2px solid black; */
+    height: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+#endpage .endpageaddress .ea{
+    /* border: 2px solid red; */
+    width: 25%;
+}
+/* created four divs keeping same id=ea  */
+
+#endpage .endpageaddress .ea #ea-h4{
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-left: 30px;
+    
+}
+/*  #ea-h4  is the title of the ea  */
+
+
+#endpage .endpageaddress .ea #ea-h2{
+    font-family: 'Roboto', sans-serif;
+    color: #124C5F;
+    margin-top: 20px;
+    margin-left: 10px;
+    
+}
+
+#endpage .endpageaddress .ea #ea-h2:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+}
+/*  #ea-h3  is the contact no --of the ea  */
+
+
+#endpage .endpageaddress .ea #ea-h3{
+    font-family: 'Roboto', sans-serif;
+    color: darkgray;
+    margin-top: 10px;
+    margin-left: 10px;
+    
+}
+
+/*  #ea-h3  is the address of the ea  */
+
+
+#endpage .endpageaddress .ea #ea-h3:hover{
+    cursor: pointer;
+    color: black;
+}
+
+/* hovering effect of address  */
+
+#endpage .endpageaddress .ea .socialicons{
+    /* border: 2px solid blue; */
+    width: 200px;
+    height: 70px;
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Social icons----------------------------------- */
+
+#endpage .endpageaddress .ea .socialicons .fb{
+    /* border: 2px solid red; */
+    width: 50%;
+    height: 100%;
+    background: lightgray;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all  ease-in-out;
+
+}
+
+#endpage .endpageaddress .ea .socialicons .fb:hover{
+    background: lightskyblue;
+    cursor: pointer;
+    
+}
+
+/*   fb icon and hover effect */
+
+#endpage .endpageaddress .ea .socialicons .insta{
+    /* border: 2px solid red; */
+    width: 50%;
+    height: 100%;
+    background: lightgray;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#endpage .endpageaddress .ea .socialicons .insta:hover{
+    background: rgb(240, 90, 115);
+    cursor: pointer;
+}
+
+/*  ----- insta icon and hover effect---- */
+
+#endpage .endpageaddress .ea .socialicons .whatsap{
+     /* border: 2px solid red; */
+     width: 50%;
+     height: 100%;
+     background: lightgray;
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+#endpage .endpageaddress .ea .socialicons .whatsap:hover{
+    background: rgb(114, 199, 114);
+    cursor: pointer;
+}
+
+/*  ----- whatsap icon and hover effect---- */
+
+#endpage .endpageaddress .ea .socialicons #icon1{
+    width: 15px;
+
+}
+#endpage .endpageaddress .ea .socialicons #icon2{
+    width: 25px;
+
+}
+#endpage .endpageaddress .ea .socialicons #icon3{
+    width: 30px;
+}
+
+/* all 3 icons widht setting as per need  */
+
+
+
+/* ------------------------ addresss page ends here------------------------------------------------- */
+
+
+
+
+/* ------------------------ botttom page finally here here------------------------------------------------- */
+
+
+
+
+#endpage .endpagebottom{
+    /* border: 2px solid blue; */
+    height: 16%;
+    display: flex;
+    border-top: 1px solid black;
+}
+
+/*   main border for reference */
+
+#endpage .endpagebottom .copyright{
+    /* border: 2px solid red; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*  first section for copyright line  */
+
+#endpage .endpagebottom .copyright p{
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  
+
+}
+
+/*    styling for the p-tag (copyright line)   */
+
+#endpage .endpagebottom .FAQ{
+    /* border: 2px solid red; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*  here we have created a div containing 5 buttons with display flex    */
+
+
+
+#endpage .endpagebottom .FAQ button{
+    width: 110px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: 900;
+    border: none;
+    background-color: transparent;
+    color: rgb(111, 104, 104);
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.05rem;
+}
+
+
+/*  the styling for the buttons used with no border & transparent bg-color */
+
+
+
+#endpage .endpagebottom .FAQ button:hover{
+    cursor: pointer;
+    color: black;
+}
+
+/*hover effect on buttons  */
+
+
+/* ---------------FInally End of the Project here ---------------------------------------  */
